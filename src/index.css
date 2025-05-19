@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 70% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 81% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 142 70% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 142 70% 50%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-portfolio-black text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .gradient-heading {
+    @apply bg-gradient-to-r from-portfolio-green to-portfolio-pink bg-clip-text text-transparent;
+  }
+
+  .animated-gradient-border {
+    @apply relative rounded-lg p-[3px] overflow-hidden w-full;
+  }
+
+  .animated-gradient-border::before {
+    content: "";
+    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-portfolio-green via-portfolio-pink to-portfolio-green animate-gradient-x;
+    z-index: -1;
+  }
+
+  .animated-gradient-border>* {
+    @apply w-full;
+  }
+
+  .animated-gradient-border-accolade {
+    @apply relative rounded-lg p-[1px] overflow-hidden w-full bg-card;
+  }
+
+  .animated-gradient-border-accolade::before {
+    content: "";
+    @apply absolute inset-0 rounded-lg bg-gradient-to-r from-portfolio-green via-portfolio-pink to-portfolio-green animate-gradient-x;
+    z-index: 0;
+  }
+
+  .animated-gradient-border-accolade>* {
+    @apply w-full relative z-10;
+  }
+
+  .nav-item {
+    @apply relative px-4 py-2 text-foreground hover:text-portfolio-green transition-colors;
+  }
+
+  .nav-item-active {
+    @apply text-portfolio-green;
+  }
+
+  .nav-item-active::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-portfolio-green;
+  }
+}
