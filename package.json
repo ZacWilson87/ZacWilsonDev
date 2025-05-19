@@ -5,10 +5,11 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "tsc && vite build",
         "build:dev": "vite build --mode development",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "deploy": "npm run build && touch dist/.nojekyll && git add dist && git commit -m 'Deploy to GitHub Pages' && git subtree push --prefix dist origin gh-pages"
     },
     "dependencies": {
         "@hookform/resolvers": "^3.9.0",
