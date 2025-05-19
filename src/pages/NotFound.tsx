@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 
@@ -27,14 +27,14 @@ const NotFound = () => {
             asChild
             className="bg-portfolio-green text-black hover:bg-portfolio-green/80"
           >
-            <a href="/">Return Home</a>
+            <Link to="/">Return Home</Link>
           </Button>
           <Button
             asChild
             variant="outline"
             className="border-portfolio-pink text-portfolio-pink hover:bg-portfolio-pink/10"
           >
-            <a href="/contact">Contact Support</a>
+            <Link to="/contact">Contact Support</Link>
           </Button>
         </div>
       </div>
