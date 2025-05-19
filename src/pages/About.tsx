@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin } from "lucide-react";
+import engagedImage from '@/assets/images/Engaged.png';
 
 const About = () => {
   useEffect(() => {
@@ -21,7 +22,11 @@ const About = () => {
             <div className="md:col-span-1">
               <div className="rounded-lg overflow-hidden animated-gradient-border mb-6">
                 <div className="aspect-square rounded-lg bg-muted flex items-center justify-center">
-                  <img src="/Engaged.png" alt="Zac" className="w-full h-full object-cover rounded-lg" />
+                  <img
+                    src={engagedImage}
+                    alt="Zac"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
               </div>
 
@@ -90,7 +95,7 @@ const About = () => {
                     Hi, I'm Zac Wilson — a passionate software engineer with over 5 years of experience building full-stack web applications and integrating cutting-edge technologies to solve real-world problems.
                   </p>
                   <p>
-                    My journey into tech began at 29, when I enrolled in LaunchCode to learn programming fundamentals. That leap kickstarted my career. Shortly after completing the program, I was hired by Affirma, and I’ve been growing ever since.
+                    My journey into tech began at 29, when I enrolled in LaunchCode to learn programming fundamentals. That leap kickstarted my career. Shortly after completing the program, I was hired by Affirma, and I've been growing ever since.
                   </p>
                   <p>
                     I specialize in developing scalable, efficient, and user-focused software. From front-end interfaces to backend APIs, I enjoy working across the stack to build solutions that are both powerful and intuitive. Lately, I've been diving deeper into AI integrations—bringing intelligent features into the products I help build.
@@ -139,7 +144,7 @@ const About = () => {
                       Affirma Consulting | 2021 - Present
                     </p>
                     <p className="text-muted-foreground">
-                      Work with a range of clients to design and develop custom software solutions tailored to their needs. Beyond writing code, I’ve taken on multiple roles—leading development teams, mentoring junior engineers, conducting code reviews, contributing to technical blogs, and even supporting sales efforts by helping communicate technical value to prospective clients. I thrive in dynamic environments where I can wear many hats and deliver impact across both technical and strategic areas.
+                      Work with a range of clients to design and develop custom software solutions tailored to their needs. Beyond writing code, I've taken on multiple roles—leading development teams, mentoring junior engineers, conducting code reviews, contributing to technical blogs, and even supporting sales efforts by helping communicate technical value to prospective clients. I thrive in dynamic environments where I can wear many hats and deliver impact across both technical and strategic areas.
                     </p>
                   </div>
                 </div>

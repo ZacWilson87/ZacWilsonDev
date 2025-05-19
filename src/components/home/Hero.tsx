@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import meImage from '@/assets/images/me.png';
 
 const Hero = () => {
   return (
@@ -43,9 +44,9 @@ const Hero = () => {
                 {/* Replace with your profile image */}
                 <div className="h-full w-full flex items-center justify-center text-6xl font-bold gradient-heading">
                   <img
-                    src="../../public/me.png"
-                    alt="Zac Wilson sitting in a coffee shop, coding."
-                    className="w-full h-full object-cover"
+                    src={meImage}
+                    alt="Zac Wilson"
+                    className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
               </div>
